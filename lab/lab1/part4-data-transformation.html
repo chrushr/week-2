@@ -64,6 +64,33 @@
     ===================== */
 
     var data = bikeArrayClean;
+    var dataFiltered = []
+    for(var i = 0; i < data.length;i++){
+      if (data[i][3]>20) {
+        dataFiltered.push(data[i])
+      }
+    }
+    console.log(dataFiltered)
+
+
+
+    // ## Add Markers to the map
+    //
+    // Loop through this filtered array, adding all markers to the map.
+
+
+    for (var i = 0; i < dataFiltered.length; i++){
+      L.marker(dataFiltered[i]).addTo(map)
+    }
+
+    // Without modifying part4-data-dirty.js, change your code to account for the
+    // dirty data. Note: it is okay if your new code ignores a few of the points,
+    // if their formatting is especially wrong. But it should accommodate most points.
+    var data = bikeArrayDirty;
+    for (var i =0; i < dataFiltered.length; i++){
+      if (bikeArrayDirty[i][bikeArrayDirty[i].length]
+
+    //array may not be the best way to record  markers. better use ******** object *********
 
     /* =====================
 

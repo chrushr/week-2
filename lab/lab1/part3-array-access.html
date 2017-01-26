@@ -69,11 +69,18 @@
       ext: 'png'
     }).addTo(map);
 
+
+
     /* =====================
 
     Start code
 
     ===================== */
+    var restaurantData = [[39.9521, -75.168, "restaurant1"], [39.9523, -75.162, "restaurant2"]]
+    for (var i = 0; i < 3; i++){L.marker(restaurantData[i]).addTo(map)}
+
+
+
 
     L.marker([0, 0]).addTo(map);
     L.marker([0, 0]).addTo(map);
