@@ -71,34 +71,6 @@
 
 
 
-
-
-
-
-
-
-      var infowindow = new google.maps.InfoWindow();
-
-      for (var i = 1; i < array.length; i++) {
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(array[i][0], arraylat[i][1]),
-          map: map
-        });
-
-        makeInfoWindowEvent(map, infowindow, array[i][4], marker);
-
-        markers.push(marker);
-      }
-    }
-
-    function makeInfoWindowEvent(map, infowindow, contentString, marker) {
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker);
-      });
-    }
-
-
       <script>
       var jsonToCsv = function(json) { console.log(json); };
 
